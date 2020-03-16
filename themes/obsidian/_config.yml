@@ -1,7 +1,7 @@
 #! ---------------------------------------------------------------
-#! ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█ 
-#! █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█ 
-#! ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀ 
+#! ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
+#! █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+#! ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
 #! ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
 #! ---------------------------------------------------------------
 #! Theme Obsidian - A dark Hexo theme, it's responsive, simple but elegant.
@@ -14,7 +14,7 @@
 
 #! ---------------------------------------------------------------
 #! █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
-#! █░▀█ █░█ ░█░ █▀▀ ░▀▄ 
+#! █░▀█ █░█ ░█░ █▀▀ ░▀▄
 #! ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
 #! ---------------------------------------------------------------
 #! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
@@ -54,6 +54,7 @@ page_titles:
 # Social media links
 socials:
   github: "https://github.com/xuRookie"
+  jianshu: "https://www.jianshu.com/u/d283469b01b9"
   # twitter: "https://twitter.com/TriDiamond6"
   stackoverflow: "https://stackoverflow.com/users/7602324/tridiamond?tab=profile"
 
