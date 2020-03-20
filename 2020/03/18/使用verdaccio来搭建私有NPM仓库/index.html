@@ -99,13 +99,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.5k
+                    2.8k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
+                    3 mins.
                 </span>
                 
                 
@@ -158,10 +158,35 @@
 <p>npm install verdaccio -g –unsafe-perm</p>
 </blockquote>
 </li>
-<li><p>运行</p>
-<!-- ![启动示例](/images/run-verdaccio.png) --></li>
+<li><p>运行<br><img src="/images/run-verdaccio.png" alt="启动示例"></p>
+</li>
+<li><p>修改配置文件config.yaml。运行verdaccio，就可以看见配置文件存放目录，找到文件修改，加添一行：</p>
+<blockquote>
+<h1 id="如下是新增的，默认是没有的，只能在本机访问，添加完成后就可以在外网访问了"><a href="#如下是新增的，默认是没有的，只能在本机访问，添加完成后就可以在外网访问了" class="headerlink" title="如下是新增的，默认是没有的，只能在本机访问，添加完成后就可以在外网访问了~"></a>如下是新增的，默认是没有的，只能在本机访问，添加完成后就可以在外网访问了~</h1><p>listen: 0.0.0.0:4873  </p>
+</blockquote>
+</li>
+<li><p>一般会通过pm2来管理进程（pm2就不过多讲述）<br>安装：<code>npm install -g pm2</code><br>启动：<code>pm2 start which verdaccio</code></p>
+</li>
+<li><p>使用</p>
+<pre><code>#当前npm 服务指向 本地
+npm set registry http://localhost:4873
+# 注册用户
+npm adduser –registry http://localhost:4873
+</code></pre></li>
 </ol>
-
+<p>#查看当前用户,是否是注册用户.<br>npm who am i</p>
+<p>```</p>
+<ol start="7">
+<li>npm发布包<br>新建一个文件夹，npm init初始化一个package.json，完成新建包后，就使用<code>npm publish</code>发布包。<blockquote>
+<p>npm publish –registry <a href="http://localhost:4873" target="_blank" rel="noopener">http://localhost:4873</a></p>
+</blockquote>
+</li>
+</ol>
+<p>发布完成后，在刷新下 <a href="http://localhost:4873/#/" target="_blank" rel="noopener">http://localhost:4873/#/</a> 就可以看到我们刚刚发布的包了</p>
+<ol start="9">
+<li>下载包 <code>npm install [package name]</code></li>
+</ol>
+<h3 id="本次内容还很粗糙，后续会跟进内容，在将内容细致化一下"><a href="#本次内容还很粗糙，后续会跟进内容，在将内容细致化一下" class="headerlink" title="本次内容还很粗糙，后续会跟进内容，在将内容细致化一下"></a>本次内容还很粗糙，后续会跟进内容，在将内容细致化一下</h3>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
@@ -215,6 +240,13 @@
             </div>
             
             
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>目录</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如下是新增的，默认是没有的，只能在本机访问，添加完成后就可以在外网访问了"><span class="toc-number">1.</span> <span class="toc-text">如下是新增的，默认是没有的，只能在本机访问，添加完成后就可以在外网访问了~</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本次内容还很粗糙，后续会跟进内容，在将内容细致化一下"><span class="toc-number">1.0.1.</span> <span class="toc-text">本次内容还很粗糙，后续会跟进内容，在将内容细致化一下</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
             
             
         </div>
