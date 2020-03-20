@@ -31,4 +31,33 @@ tags:
  > npm install verdaccio -g --unsafe-perm
 
 3. 运行
-<!-- ![启动示例](/images/run-verdaccio.png) -->
+![启动示例](/images/run-verdaccio.png)
+
+4. 修改配置文件config.yaml。运行verdaccio，就可以看见配置文件存放目录，找到文件修改，加添一行：
+> # 如下是新增的，默认是没有的，只能在本机访问，添加完成后就可以在外网访问了~  
+> listen: 0.0.0.0:4873  
+
+5. 一般会通过pm2来管理进程（pm2就不过多讲述）
+安装：`npm install -g pm2`
+启动：`pm2 start which verdaccio`
+
+6. 使用
+```
+#当前npm 服务指向 本地
+npm set registry http://localhost:4873
+# 注册用户
+npm adduser –registry http://localhost:4873
+
+#查看当前用户,是否是注册用户.
+npm who am i
+```
+
+7. npm发布包
+新建一个文件夹，npm init初始化一个package.json，完成新建包后，就使用`npm publish`发布包。
+> npm publish --registry http://localhost:4873
+
+发布完成后，在刷新下 http://localhost:4873/#/ 就可以看到我们刚刚发布的包了
+
+9. 下载包 `npm install [package name]`
+
+### 本次内容还很粗糙，后续会跟进内容，在将内容细致化一下
